@@ -45,7 +45,6 @@ public class ConversorMoedas {
 
         if (jsonObj.has("conversion_result")) {
             double conversionResult = jsonObj.get("conversion_result").getAsDouble();
-            String saida = String.format("A conversão de %s para %s com valor %.2f %s", moedaBase, moedaAlvo, conversionResult, moedaAlvo);
             stream.close();
             return conversionResult;
         } else {
